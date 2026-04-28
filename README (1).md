@@ -374,8 +374,7 @@ Fire labels are aggregated daily within a **20 km radius** of each city centroid
 | 30-day hourly weather forecast | `outputs/phase3_weather_hourly_30d.parquet` | 11,520 | ~15 | ✅ Processed | NB3 |
 | 30-day hourly wildfire risk scores | `outputs/phase4_wildfire_hourly_30d.parquet` | 11,520 | ~10 | ✅ Processed | NB4 |
 | NASA FIRMS sensor archives (raw CSVs) | `data/raw/firms/` | — | — | ✅ Available | External |
-| SPEI drought index | — | — | — | 📋 Planned | — |
-| NDWI vegetation moisture index | — | — | — | 📋 Planned | — |
+
 
 ---
 
@@ -515,7 +514,7 @@ Three component models are trained per city per feature (up to 144 bundles: 16 c
 
 | Item | Status |
 |------|--------|
-| `data_ingestion` branch | ⚠️ **Pending merge into `main`** — contains the finalised NB1 data ingestion pipeline. Must be merged before running the full pipeline from a fresh clone. |
+| `data_ingestion` branch | **Pending merge into `main`** — contains the finalised NB1 data ingestion pipeline. Must be merged before running the full pipeline from a fresh clone. |
 | `main` branch | Reflects Phases 2–4; NB1 outputs (`master_daily.parquet`, `weather_hourly.parquet`, etc.) must be present before executing NB2–NB4. |
 | FastAPI application | A `app/` folder exists in the repository root containing a FastAPI service that exposes the 30-day risk forecast via REST endpoints. It is independent of the notebook pipeline and requires Phase 4 outputs to be present. |
 
